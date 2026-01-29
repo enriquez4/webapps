@@ -1,6 +1,5 @@
 from jinja2 import Environment, FileSystemLoader
 import os
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 env = Environment(
@@ -15,7 +14,7 @@ def app(environ, start_response):
         title = "Hello Page"
         message = "Rendered using Jinja2"
     else:
-        title = "Home"
+        title = "Welcome to Enriquez Home Page!"
         message = "Plain Python + Gunicorn + Nginx"
 
     template = env.get_template("home.html")
